@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Where the Family Budget Goes</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="hero sketch-hero">
+      <div>
+        <h1>Where the <span>Family Budget</span> Goes</h1>
+        <h2>Food, Leisure and Travel Spending Patterns in Melbourne</h2>
+        <p class="abstract">A data story about how Melbourne households balance everyday needs, lifestyle choices and travel experiences.</p>
+      </div>
+      <div class="family-scene" aria-hidden="true">
+        <div class="skyline"><i></i><i></i><i></i></div>
+        <div class="family"><b></b><b></b><b></b><b></b></div>
+        <div class="cloud"></div><div class="hill"></div>
+        <div class="date-card">Data period:<br><strong>2020 – 2024</strong></div>
+      </div>
+    </header>
+
+    <nav class="filters">
+      <span>SELECT HOUSEHOLD TYPE</span>
+      <button class="active">All Households</button>
+      <button>Couple with Children</button>
+      <button>Couple without Children</button>
+      <button>Single Person</button>
+      <button>Single Parent</button>
+    </nav>
+
+    <section class="story-row intro-bg">
+      <aside class="section-label"><div class="badge">1</div><h3>INTRODUCTION</h3><p>Overview of family spending in Melbourne compared to Australia.</p><span class="down">⌄</span></aside>
+      <article class="chart-card"><h4>Average weekly household spending in Melbourne</h4><p>Food, leisure and travel are compared against other household costs.</p><div id="vis-waffle"></div><p class="chart-analysis">Food is a regular but controlled expense, while the large “Other” share reminds readers that family budgets are split across many fixed costs.</p></article>
+      <article class="chart-card"><h4>Average weekly spending on food & leisure by suburb</h4><p>A real City of Melbourne boundary map shows cafe and restaurant seating capacity clusters.</p><div id="vis-map"></div><p class="chart-analysis">Hospitality capacity clusters around the CBD and inner-city activity areas, suggesting where eating-out options are most concentrated.</p></article>
+      <article class="chart-card"><h4>Melbourne vs Australian average</h4><p>Melbourne spends more on leisure and dining out.</p><div id="vis-comparison"></div><p class="chart-analysis">Melbourne is higher than the Australian average for food-related lifestyle spending, but travel is slightly lower in this comparison.</p></article>
+    </section>
+
+    <section class="story-row food-bg">
+      <aside class="section-label"><div class="badge green">2</div><h3>FOOD<br>SPENDING</h3><p>How much do families spend on food and what are they buying?</p><span class="down">⌄</span></aside>
+      <article class="chart-card"><h4>Annual food spending per household</h4><p>Grocery and dining-out costs both increase over time.</p><div id="vis-annual-food"></div><p class="chart-analysis">Both grocery and dining-out spending rise across the period, showing that food pressure is not limited to one part of the food budget.</p></article>
+      <article class="chart-card"><h4>Food spending breakdown (2024)</h4><p>Food categories are grouped into a simple part-to-whole view.</p><div id="vis-donut"></div><p class="chart-analysis">The donut chart shows food as a mixed basket rather than a single cost, with everyday grocery items and dining out both contributing to the total.</p><p class="source-note">Values are top-coded • Source: ABS Household Expenditure Survey</p></article>
+      <article class="chart-card"><h4>Average weekly spending on key categories by household type</h4><p>Families with children generally spend more across all three categories.</p><div id="vis-households"></div><p class="chart-analysis">Households with children sit higher across the three categories, which makes family structure an important driver of weekly spending.</p></article>
+    </section>
+
+    <section class="story-row leisure-bg">
+      <aside class="section-label"><div class="badge orange">3</div><h3>LEISURE<br>ACTIVITIES</h3><p>Where families spend their money and time on leisure?</p><span class="down">⌄</span></aside>
+      <article class="chart-card"><h4>Participation rate vs. average weekly spending</h4><p>Bubble size represents the scale of participation.</p><div id="vis-leisure-bubble"></div><p class="chart-analysis">Activities in the upper-right area combine high participation with higher weekly spending, making them the strongest lifestyle pressure points.</p></article>
+      <article class="chart-card"><h4>Participation rate by age group (%)</h4><p>A heatmap-style panel shows how activities vary by age.</p><div id="vis-age-heatmap"></div><p class="chart-analysis">The heatmap highlights that leisure is not evenly distributed by age: younger and middle-age groups tend to show stronger participation.</p></article>
+      <article class="chart-card"><h4>Average weekly leisure spending by income group</h4><p>Higher-income households allocate more to leisure activities.</p><div id="vis-income"></div><p class="chart-analysis">Leisure spending rises with income, suggesting that it behaves more like a discretionary lifestyle category than a fixed household need.</p></article>
+    </section>
+
+    <section class="story-row travel-bg">
+      <aside class="section-label"><div class="badge blue">4</div><h3>TRAVEL<br>PATTERNS</h3><p>Where do Melbourne families travel and how much do they spend?</p><span class="down">⌄</span></aside>
+      <article class="chart-card"><h4>Top domestic travel destinations</h4><p>December quarter 2025 shows the largest state destinations by overnight trips.</p><div id="vis-aus-map"></div><p class="chart-analysis">The map makes the travel story spatial: New South Wales and Queensland stand out as the strongest domestic destinations.</p></article>
+      <article class="chart-card"><h4>Domestic vs International travel spending</h4><p>Domestic travel recovered strongly after the 2021 low.</p><div id="vis-travel-area"></div><p class="chart-analysis">Domestic travel recovers earlier and remains larger, while international travel grows again after the low point.</p></article>
+      <article class="chart-card"><h4>Top 5 international destinations by spend</h4><p>New Zealand and Indonesia are leading overseas destinations.</p><div id="vis-intl"></div><p class="chart-analysis">Nearby and familiar destinations dominate international travel spending, with New Zealand and Indonesia leading the ranking.</p></article>
+    </section>
+
+    <section class="story-row season-bg">
+      <aside class="section-label"><div class="badge purple">5</div><h3>SEASONAL<br>PATTERNS</h3><p>How do spending patterns change throughout the year?</p><span class="down">⌄</span></aside>
+      <article class="chart-card"><h4>Average weekly spending by season</h4><p>Food is stable while leisure and travel show stronger seasonal peaks.</p><div id="vis-season-small"></div><p class="chart-analysis">Food stays comparatively flat by season, while leisure and travel show clearer seasonal movement.</p></article>
+      <article class="chart-card"><h4>Monthly average spending by category</h4><p>Monthly patterns highlight holiday and summer spending peaks.</p><div id="vis-monthly"></div><p class="chart-analysis">Monthly peaks are more visible for leisure and travel, especially around holiday periods when families are more likely to spend on experiences.</p></article>
+      <article class="chart-card purple-insight"><h4>💡 Key insight</h4><p>Spending on leisure and travel peaks in summer and holiday periods, while food spending remains relatively stable throughout the year.</p></article>
+    </section>
+
+    <section class="story-row conclusion-bg">
+      <aside class="section-label"><div class="badge navy">6</div><h3>CONCLUSION</h3><p>Key takeaways from the data story.</p><span class="down">⌄</span></aside>
+      <article class="chart-card summary"><h4>Key takeaways</h4><ul class="takeaways"><li><b>Food</b> spending is stable and forms the largest share of the weekly household budget.</li><li><b>Leisure</b> spending is flexible but important for family wellbeing.</li><li><b>Travel</b> spending is occasional and seasonal, creating larger budget peaks.</li><li><b>Seasonality</b> plays a big role: summer drives leisure and travel.</li></ul></article>
+      <article class="chart-card"><h4>Family spending journey</h4><p>Connected dots summarise how key categories have moved over time.</p><div id="vis-journey"></div><p class="chart-analysis">The connected dots summarise the story: food remains steady, leisure grows gradually, and travel creates the largest change over time.</p></article>
+      <article class="chart-card summary"><h4>⭐ Overall message</h4><p>Melbourne families allocate significant portions of their budget to lifestyle and experiences. As income rises and travel recovers, thoughtful planning can help balance essentials with meaningful life experiences.</p><div class="emoji-row">👨‍👩‍👧‍👦</div></article>
+    </section>
+
+    <footer class="footer"><span>Data Sources: ABS Household Expenditure Survey; Tourism Research Australia; City of Melbourne Open Data.</span><span>Design & Visualisation: Zhong Ren &nbsp; | &nbsp; FIT2179 Data Visualisation &nbsp; | &nbsp; May 2026</span></footer>
+  </main>
+  <script src="js/render.js"></script>
+</body>
+</html>
